@@ -1,6 +1,6 @@
 # Terraform-EC2-Instances
 
-This repo is used to deploy EC2 instances on your AWS account using Terraform. It creates a custom VPC, Security Group, fetches latest AMI-ID using aws_ssm_parametar data block and deploys EC2 instances using these parametars. 
+This repo is used to deploy EC2 instances on your AWS account using Terraform. It creates a custom VPC, Security Group, Private and Public Subnet (you will need to specify), Internet Gateway, NAT Gateway, Route Tables, fetches latest AMI-ID using aws_ssm_parametar data block and deploys EC2 instances using these parametars. 
 
 This code will work regardless of the region and the number of instances.
 
@@ -11,6 +11,8 @@ Variables:
            - instance_count - for selecting the number of Instances created
 
            - instance_type - for selecting the Instance Type
+           
+           - use_public_subnet - for selecting private or public subnet
 
            - rules -  for defining the rules of the Secutiy Group
            
